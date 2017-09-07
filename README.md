@@ -1,1 +1,2 @@
 "JilinReruitment"
+基于Flask框架的吉林长春招聘网站。目的在于熟悉掌握Flask框架及相关控件
