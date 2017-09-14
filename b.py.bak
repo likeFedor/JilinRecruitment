@@ -1,0 +1,2 @@
+from a.a import say
+say()
