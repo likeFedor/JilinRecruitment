@@ -13,7 +13,6 @@ def make_shell_context():
                 Permission=Permission, Post=Post, Comment=Comment)
 manager.add_command("shell", Shell(make_context=make_shell_context))
 manager.add_command('db', MigrateCommand)
-
 from tests.test_client import FlaskClientTestCase
 @manager.command
 def test():
