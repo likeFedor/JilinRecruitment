@@ -51,7 +51,7 @@ class Role(db.Model):
     def __repr__(self):
         return '<Role %r>' % self.name
 
-
+#关联数据库
 class Follow(db.Model):
     __tablename__ = 'follows'
     follower_id = db.Column(db.Integer, db.ForeignKey('users.id'),
