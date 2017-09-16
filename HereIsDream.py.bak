@@ -24,6 +24,7 @@ def test():
 #批量执行unittest hello world 
     tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner(verbosity=2).run(tests)
+
 #部署时直接执行这个命令就行1、python manage.py delpoy
 @manager.command
 def deploy():
@@ -39,6 +40,9 @@ def deploy():
 
     # create self-follows for all users
     User.add_self_follows()
-
+from flask import render_template
+@app.route('/')
+def index():
+	 return render_template('index.html')
 if __name__=='__main__':
 	manager.run()

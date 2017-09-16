@@ -30,8 +30,8 @@ def create_app(config_name):
     db.init_app(app)
     login_manager.init_app(app)
     pagedown.init_app(app)
-    return app
-'''导入蓝本
+    
+#导入蓝本
     if not app.debug and not app.testing and not app.config['SSL_DISABLE']:
         from flask_sslify import SSLify
         sslify = SSLify(app)
@@ -39,9 +39,9 @@ def create_app(config_name):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    from .auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint, url_prefix='/auth')
+    #from .auth import auth as auth_blueprint
+    #app.register_blueprint(auth_blueprint, url_prefix='/auth')
 
-    from .api_1_0 import api as api_1_0_blueprint
-    app.register_blueprint(api_1_0_blueprint, url_prefix='/api/v1.0')'''
-
+    #from .api_1_0 import api as api_1_0_blueprint
+    #app.register_blueprint(api_1_0_blueprint, url_prefix='/api/v1.0')
+    return app
