@@ -8,7 +8,7 @@ from .forms import EditProfileForm, EditProfileAdminForm, PostForm,\
     CommentForm
 from .. import db
 from ..models import Permission, Role, User, Post, Comment
-#from ..decorators import admin_required, permission_required
+from ..decorators import admin_required, permission_required
 
 
 @main.after_app_request
